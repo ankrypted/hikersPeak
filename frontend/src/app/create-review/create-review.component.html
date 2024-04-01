@@ -1,0 +1,43 @@
+<app-nav-bar></app-nav-bar>
+<div class="submit_review_container">
+   
+    <div class= "hike_name_container">
+        <h4 class="hike_name">
+            Hike Name:
+        </h4>
+        <input type="text">
+        <!-- <mat-form-field style="background-color: black !important" appearance="fill">
+            <mat-label style="color:black">Ramadevara Betta</mat-label>
+            <input matInput style="color:black">
+        </mat-form-field> -->
+    </div>
+    <div class= "full_name_container">
+        <h4 class="full_name">
+            Your Name:
+        </h4>
+        <input type="text">
+    </div>
+    <div class= "date_of_visit_container">
+        <div class="date_form_container">
+            <!-- <mat-label class="choose_a_date_text">Choose a date</mat-label> -->
+                <h4 class="date_of_visit">
+                    Date of Visit:
+                </h4>
+                <input class="date_picker" [matDatepicker]="picker">
+                <!-- <mat-hint class="date_hint">MM/DD/YYYY</mat-hint>       mat-datepicker-toggle          -->
+                <div class="data_picker_icon_container">
+                    <mat-datepicker-toggle class="date_picker_icon" matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </div>
+            </div>
+    </div>
+    <div class= "review_container">
+        <h4 class="review_text">
+            Review:
+        </h4>
+        <textarea class="review_content"> </textarea>   
+    </div>
+    <button class="submit_review_btn">
+        Submit
+    </button>
+</div>

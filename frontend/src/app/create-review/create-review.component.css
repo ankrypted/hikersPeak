@@ -1,0 +1,122 @@
+.submit_review_container {
+    margin-left: 40%;
+    margin-top: 8vh;
+    width: 70%;
+
+}
+.hike_name_container {
+    display: flex;
+    align-items: baseline;
+    width: 40%;
+
+    /* background-color: #878785; */
+}
+
+.hike_name {
+    /* margin-right: 10px; */
+    flex-basis: 22.3%;
+}
+
+.full_name_container {
+    display: flex;
+    align-items: baseline;
+    width: 40%;
+}
+
+.full_name {
+    flex-basis: 22.3%;
+
+    /* margin-right: 10px; */
+}
+
+
+
+.review_container {
+    display: flex;
+    align-items: baseline;
+    width: 35%;
+    margin-top: 2.7vh;
+}
+
+.review_text {
+    /* margin-right: 10px; */
+    /* flex-basis: 5%; */
+    flex-basis: 34.4%;
+
+
+}
+
+.review_content {
+    height: 15vh;
+    resize: none;
+    width: 100%;
+    /* flex-basis: 50%; */
+}
+
+
+/* .date_of_visit_container {
+    display: flex;
+    
+} */
+
+/* .date_form_container { */
+    /* border: 1px solid rgba(0, 0, 0, 0.377);
+    width: 10%;
+    height: 5vh !important; */
+/* } */
+
+.choose_a_date_text {
+    color: black;
+    
+}
+
+.date_form_container {
+    display: flex;
+    width: 30%;
+    height: 4vh;
+
+
+    /* margin-left: 5.2%; */
+     align-items: center; 
+}
+
+.date_of_visit {
+    padding-top: 15px;
+    flex-basis: 29.5%;
+}
+
+.date_picker {
+    /* flex-basis: 40vh !important;  */
+    flex-basis: 20%;
+    margin-right: 10px;
+    /* border-bottom: 1px solid rgb(211, 34, 64); */
+    /* flex-basis: 20%; */
+    /* width: 300vw; */
+    
+    /* height: 20px; */
+}
+
+.data_picker_icon_container {
+    height: 40px;
+    width: 40px;
+    background-color: rgb(38, 38, 39);
+    border-radius: 50%;
+    justify-content: center;
+}
+
+.date_picker_icon {
+    /* padding-left: 12%;
+    padding-top: 100px; */
+
+    /* float: right; */
+    /* flex-basis: 80%; */
+} 
+
+.date_hint {
+    color: black;
+}
+
+.submit_review_btn {
+    margin-left: 8%;
+    margin-top: 8vh;
+}
