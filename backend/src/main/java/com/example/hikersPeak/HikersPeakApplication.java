@@ -11,11 +11,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 
-@SpringBootApplication(exclude = {SecurityAutoConfiguration.class })
+//@SpringBootApplication(exclude = {SecurityAutoConfiguration.class })
+@SpringBootApplication
 @RestController
-@CrossOrigin(value = "http://localhost:4200", allowCredentials = "true")
+//@CrossOrigin(value = "http://localhost:4200", allowCredentials = "true")
 public class HikersPeakApplication {
 	private final ReviewService reviewService;
 
@@ -28,17 +30,22 @@ public class HikersPeakApplication {
 		SpringApplication.run(HikersPeakApplication.class, args);
 	}
 	@GetMapping("/")
-	public List<Reviews> hello() {
-		Reviews review1 = new Reviews("1", "Ramadevera Hills", "Ankesh", "Loved it");
-		return List.of(review1);
+	public List<Reviews> getAllReviews() {
+		return reviewService.getAll();
+//		Reviews review1 = new Reviews("1", "Ramadevera Hills", "Ankesh", "Loved it");
+//		return List.of(review1);
 	}
 
 	@PostMapping("/saveReview")
 	@ResponseBody
-	public String saveReview(@RequestBody Reviews reviews) {
+	public HashMap<String, String> saveReview(@RequestBody Reviews reviews) {
 		reviewService.saveData(reviews);
+		HashMap<String, String> retValue = new HashMap<>();
+		retValue.put("status", "200");
+		retValue.put("message", "successfully posted");
 //		HttpHeaders responseHeaders = new HttpHeaders();
-//		return new ResponseEntity<>("Successful", responseHeaders, 200);
-		return "Successfully received!";
+//		return new ResponseEntity<>(jsonify("Successful"), responseHeaders, 200);
+		return retValue;
+
 	}
 }
