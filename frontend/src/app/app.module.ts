@@ -14,6 +14,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 // import {provideNativeDateAdapter} from '@angular/material/core';
 import {MatIconModule} from '@angular/material/icon';
+import {MatCardModule} from '@angular/material/card';
 import {MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { ReadReviewsComponent } from './read-reviews/read-reviews.component';
@@ -51,6 +52,7 @@ const appRoute: Routes = [
     MatDatepickerModule,
     MatNativeDateModule,
     MatIconModule,
+    MatCardModule,
     HttpClientModule,
     ReactiveFormsModule,
     RouterModule.forRoot(appRoute)

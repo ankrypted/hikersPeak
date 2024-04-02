@@ -1,20 +1,19 @@
 <app-nav-bar></app-nav-bar>
 
-<p>read-reviews works!</p>
-<div *ngFor="let review of fetchedReviews">
-    <p>
-        {{review.reviewId}}
-    </p>
-    <p>
-        {{review.hikeName}}
-    </p>
-    <p>
-        {{review.yourName}}
-    </p>
-    <p>
-        {{review.dateOfVisit}}
-    </p>
-    <p>
-        {{review.review}}
-    </p>
+<!-- <p>read-reviews works!</p> -->
+<div class="review_cards_container">
+    <mat-card class="review_card" *ngFor="let review of fetchedReviews">
+        
+        <mat-card-title>
+            {{review.yourName}}
+        </mat-card-title>
+        <mat-card-content>
+            <h3> {{review.hikeName}} </h3>
+            <p>
+                {{review.review}}
+            </p>
+            
+        </mat-card-content>
+        
+</mat-card>
 </div>
