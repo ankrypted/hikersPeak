@@ -5,14 +5,17 @@ import com.example.hikersPeak.reviews.Reviews;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
 import java.util.List;
 
-@SpringBootApplication
+@SpringBootApplication(exclude = {SecurityAutoConfiguration.class })
 @RestController
-@CrossOrigin("http://localhost:4200/")
+@CrossOrigin(value = "http://localhost:4200", allowCredentials = "true")
 public class HikersPeakApplication {
 	private final ReviewService reviewService;
 
@@ -34,6 +37,8 @@ public class HikersPeakApplication {
 	@ResponseBody
 	public String saveReview(@RequestBody Reviews reviews) {
 		reviewService.saveData(reviews);
-		return "New entry has been saved to the database";
+//		HttpHeaders responseHeaders = new HttpHeaders();
+//		return new ResponseEntity<>("Successful", responseHeaders, 200);
+		return "Successfully received!";
 	}
 }

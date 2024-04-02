@@ -18,6 +18,7 @@ import {MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { ReadReviewsComponent } from './read-reviews/read-reviews.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const appRoute: Routes = [
     {
@@ -51,6 +52,7 @@ const appRoute: Routes = [
     MatNativeDateModule,
     MatIconModule,
     HttpClientModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(appRoute)
   ],
   providers: [

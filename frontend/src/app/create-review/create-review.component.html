@@ -1,11 +1,11 @@
 <app-nav-bar></app-nav-bar>
-<div class="submit_review_container">
+<form [formGroup]="reviewForm" class="submit_review_container" (ngSubmit)="postReviewSubmit()">
    
     <div class= "hike_name_container">
         <h4 class="hike_name">
             Hike Name:
         </h4>
-        <input type="text">
+        <input type="text" formControlName="hikeName">
         <!-- <mat-form-field style="background-color: black !important" appearance="fill">
             <mat-label style="color:black">Ramadevara Betta</mat-label>
             <input matInput style="color:black">
@@ -15,7 +15,7 @@
         <h4 class="full_name">
             Your Name:
         </h4>
-        <input type="text">
+        <input type="text" formControlName="yourName">
     </div>
     <div class= "date_of_visit_container">
         <div class="date_form_container">
@@ -35,9 +35,9 @@
         <h4 class="review_text">
             Review:
         </h4>
-        <textarea class="review_content"> </textarea>   
+        <textarea class="review_content" formControlName="review"> </textarea>   
     </div>
-    <button class="submit_review_btn">
+    <button type="submit" class="submit_review_btn">
         Submit
     </button>
-</div>
+</form>
