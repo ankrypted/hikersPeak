@@ -36,6 +36,13 @@ public class HikersPeakApplication {
 //		return List.of(review1);
 	}
 
+	@GetMapping("/login")
+	public String login() {
+		return "Login Successful!";
+	}
+
+
+
 	@PostMapping("/saveReview")
 	@ResponseBody
 	public HashMap<String, String> saveReview(@RequestBody Reviews reviews) {

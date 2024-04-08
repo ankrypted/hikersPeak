@@ -3,12 +3,15 @@
 <!-- <p>read-reviews works!</p> -->
 <div class="review_cards_container">
     <mat-card class="review_card" *ngFor="let review of fetchedReviews">
-        
-        <mat-card-title>
-            {{review.yourName}}
-        </mat-card-title>
+        <mat-card-header>
+            <div mat-card-avatar class="header_image"> </div>
+            <mat-card-title>
+                {{review.yourName}}
+            </mat-card-title>
+            <mat-card-subtitle><em> User </em></mat-card-subtitle>    
+        </mat-card-header>
         <mat-card-content>
-            <h3> {{review.hikeName}} </h3>
+            <h3 class="hike_name_container"> {{review.hikeName}} </h3>
             <p>
                 {{review.review}}
             </p>
