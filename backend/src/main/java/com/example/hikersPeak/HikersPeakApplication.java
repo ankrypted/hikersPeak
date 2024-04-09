@@ -1,11 +1,14 @@
 package com.example.hikersPeak;
 
+
+import com.example.hikersPeak.config.RsaKeyProperties;
 import com.example.hikersPeak.reviews.ReviewService;
 import com.example.hikersPeak.reviews.Reviews;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +18,7 @@ import java.util.HashMap;
 import java.util.List;
 
 //@SpringBootApplication(exclude = {SecurityAutoConfiguration.class })
+@EnableConfigurationProperties(RsaKeyProperties.class)
 @SpringBootApplication
 @RestController
 //@CrossOrigin(value = "http://localhost:4200", allowCredentials = "true")
