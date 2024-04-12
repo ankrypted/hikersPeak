@@ -24,7 +24,14 @@ export class CreateReviewComponent implements OnInit {
 
   constructor(private reviewService: ReviewServiceService, private formBuilder: FormBuilder) { }
 
+  signedIn: boolean = true;
+
   ngOnInit(): void {
+    if(localStorage.getItem("data") === null) {
+      console.log("No data")
+
+      this.signedIn = false;
+    }
   }
 
 

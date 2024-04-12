@@ -1,5 +1,5 @@
 <app-nav-bar></app-nav-bar>
-<form [formGroup]="reviewForm" class="submit_review_container" (ngSubmit)="postReviewSubmit()">
+<form  *ngIf="signedIn" [formGroup]="reviewForm" class="submit_review_container" (ngSubmit)="postReviewSubmit()">
    
     <div class= "hike_name_container">
         <h4 class="hike_name">
@@ -41,3 +41,8 @@
         Submit
     </button>
 </form>
+
+
+<div *ngIf="!signedIn">
+    <p> Hey </p>
+</div>

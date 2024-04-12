@@ -33,7 +33,7 @@ public class HikersPeakApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(HikersPeakApplication.class, args);
 	}
-	@GetMapping("/")
+	@GetMapping("/getReviews")
 	public List<Reviews> getAllReviews() {
 		return reviewService.getAll();
 //		Reviews review1 = new Reviews("1", "Ramadevera Hills", "Ankesh", "Loved it");

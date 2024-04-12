@@ -20,6 +20,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { ReadReviewsComponent } from './read-reviews/read-reviews.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NotSignedInComponent } from './not-signed-in/not-signed-in.component';
 
 const appRoute: Routes = [
     {
@@ -40,7 +41,8 @@ const appRoute: Routes = [
     NavBarComponent,
     IntroductionContentComponent,
     CreateReviewComponent,
-    ReadReviewsComponent
+    ReadReviewsComponent,
+    NotSignedInComponent
   ],
   imports: [
     BrowserModule,
