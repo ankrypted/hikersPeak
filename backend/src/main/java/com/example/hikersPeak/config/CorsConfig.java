@@ -105,7 +105,7 @@ public class CorsConfig {
                 )
                 .oauth2ResourceServer(OAuth2ResourceServerConfigurer::jwt)
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-//                .httpBasic(Customizer.withDefaults())
+                .httpBasic(Customizer.withDefaults())
                 .build();
     }
 
