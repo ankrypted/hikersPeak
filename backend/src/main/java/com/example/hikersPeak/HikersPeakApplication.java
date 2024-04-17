@@ -40,10 +40,7 @@ public class HikersPeakApplication {
 //		return List.of(review1);
 	}
 
-	@GetMapping("/login")
-	public String login() {
-		return "Login Successful!";
-	}
+
 
 
 
