@@ -103,6 +103,9 @@ public class CorsConfig {
                 .authorizeHttpRequests(auth -> {
                     auth.requestMatchers("/login").permitAll();
                 })
+                .authorizeHttpRequests( auth -> {
+                    auth.requestMatchers("/register").permitAll();
+                })
                 .authorizeHttpRequests( auth -> auth
                         .anyRequest().authenticated()
                 )
