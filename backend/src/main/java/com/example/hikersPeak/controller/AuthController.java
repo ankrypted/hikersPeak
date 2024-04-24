@@ -2,11 +2,10 @@ package com.example.hikersPeak.controller;
 
 import com.example.hikersPeak.service.TokenService;
 
+import com.example.hikersPeak.users.Users;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 
@@ -21,9 +20,15 @@ public class AuthController {
 //    @PostMapping("/login")
 
     @GetMapping("/login")
-    public HashMap<String, String> login() {
-        Authentication authentication = new UsernamePasswordAuthenticationToken("User1", "password1");
+    public HashMap<String, String> login(@RequestBody Users userInfo) {
+//        Authentication authentication = new UsernamePasswordAuthenticationToken("User1", "password1");
+        System.out.println(userInfo.getUserName() + " " + userInfo.getPassword());
+        //check if this pair exists in the database or not
+        Authentication authentication = new UsernamePasswordAuthenticationToken(userInfo.getUserName(), userInfo.getPassword());
         HashMap<String, String> tokenObj = token(authentication);
+
+
+
         return tokenObj;
     }
 
